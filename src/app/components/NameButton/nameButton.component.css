@@ -1,0 +1,21 @@
+.userButton{    
+    background: rgb(0, 0, 255);
+    border: 1px solid rgb(87, 87, 87);
+    border-radius: 5px;
+    margin-top: 2px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+.userButton > a{
+    text-decoration: none;
+}
+.userButton:hover{
+    background: rgba(0, 0, 255 , 0.7);
+}
+@media(min-width: 1000px){
+    .userButton{
+        width: 40vw;
+        margin-left: 30vw;
+    }
+}

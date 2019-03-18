@@ -1,0 +1,114 @@
+<br><br>
+<a id="contactListButton" routerLinkActive="active" routerLink="/home">Contact List</a>
+
+<p>{{userData.greeting}}</p>
+<nav id="detailNav">
+  <a href="/contact/{{userData._id}}#">Basic Info</a>
+  <a href="/contact/{{userData._id}}#contactBox">Contact</a>
+  <a href="/contact/{{userData._id}}#detailBox">Details</a>
+  <a href="/contact/{{userData._id}}#friendsBox">Friends</a>
+  <a href="/contact/{{userData._id}}#likesBox">Likes</a>
+</nav>
+<section id="basicBox">
+  <p class="sectionName">Basic Info</p>
+  <hr />
+  <img src="{{userData.picture}}" alt="{{userData.name.first}} {{userData.name.last}}"/>
+  <p>Name: {{userData.name.first}} {{userData.name.last}}</p>
+  <p>About:</p>
+  <p>{{userData.about}}</p>
+</section>
+<section id="contactBox">
+    <p class="sectionName">Contact</p>
+    <hr />
+    <p>Company: {{userData.company}}</p>
+    <p></p>
+    <p>Email: {{userData.email}}</p>
+    <p>Phone number: {{userData.phone}}</p>
+    <p>Adress:{{userData.address}}</p>
+    <p>Coordinates: {{userData.latitude}} Lat, {{userData.longitude}} Long</p>
+  </section>
+<section id="detailBox">
+  <p class="sectionName">Details</p>
+  <hr />
+  <p>Age: {{userData.age}}</p>
+  <p>Eye Color: {{userData.eyeColor}}</p>
+  <p></p>
+  <p>Favorite Fruid: {{userData.favoriteFruit}}</p>
+  <p></p>
+  <p>Account Balance: {{userData.balance}}</p>
+  <p></p>
+  <p>Active Status: {{userData.isActive}}</p>
+</section>
+<section id="friendsBox">
+    <p class="sectionName">Friends</p>
+    <hr />
+    <div *ngFor="let friend of userData.friends">
+      <a href="#"><p>{{friend.name}}</p></a>
+    </div>
+  </section>
+<section id="likesBox">
+  <p class="sectionName">Likes</p>
+  <hr />
+  <div *ngFor="let tag of userData.tags">
+    <a href="#"><p >{{tag}}</p></a>
+  </div>
+</section>
+
+<!-- {
+    "_id": "5c8b762b6cc5bc01f880bd05",
+    "index": 0,
+    "guid": "1f82508f-fa88-46cc-8c9c-9b8970c4e40c",
+            "isActive": true,
+            "balance": "$2,790.62",
+            "picture": "http://placehold.it/32x32",
+            "age": 37,
+            "eyeColor": "blue",
+              "name": {
+                "first": "Misty",
+                "last": "Williams"
+              },
+              "company": "NORSUL",
+              "email": "misty.williams@norsul.me",
+              "phone": "+1 (942) 557-3773",
+              "address": "202 Newport Street, Caberfae, Idaho, 4360",
+              "about": "Non laboris id ex veniam adipisicing sit. Sint aliqua proident cupidatat incididunt consectetur amet fugiat. Consectetur culpa laborum irure laboris ipsum enim duis excepteur deserunt elit do. Quis id nulla ullamco deserunt nisi. Nostrud ipsum cillum amet eu ex ullamco est aliquip. Ex ut sunt non sint laboris tempor. Consectetur ullamco sit labore et adipisicing quis commodo proident aliqua dolore id adipisicing ut.",
+              "registered": "Thursday, December 22, 2016 8:27 PM",
+              
+            "latitude": "-15.525328",
+            "longitude": "-63.240332",
+    "tags": [
+      "deserunt",
+      "nisi",
+      "proident",
+      "cupidatat",
+      "culpa"
+    ],
+    "range": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Forbes Weaver"
+      },
+      {
+        "id": 1,
+        "name": "Collier Webb"
+      },
+      {
+        "id": 2,
+        "name": "Connie Huff"
+      }
+    ],
+            "greeting": "Hello, Misty! You have 5 unread messages.",
+              "favoriteFruit": "banana"
+  }, -->
